@@ -1,8 +1,148 @@
 {
   "layerTree": [
-    "e220d708-c851-4f54-b9ae-9c56c5e04480"
+    "e220d708-c851-4f54-b9ae-9c56c5e04480",
+    "daa6aac6-3d25-4f8c-b438-a276857e2464",
+    "41b41a09-ef95-4cb6-8e6a-042b9add6c24",
+    "97837109-f323-4b83-b5dc-fae8d143816e"
   ],
   "layers": {
+    "41b41a09-ef95-4cb6-8e6a-042b9add6c24": {
+      "filters": {
+        "appliedFilters": [
+          {
+            "feature": null,
+            "operator": null,
+            "value": null
+          }
+        ],
+        "logicalOp": null
+      },
+      "name": "My Results",
+      "parameters": {
+        "color": null,
+        "opacity": 1.0,
+        "source": "71b78233-8804-4d21-8cb2-a3263c0c8124",
+        "symbologyState": null,
+        "type": "line"
+      },
+      "type": "VectorLayer",
+      "visible": true
+    },
+    "97837109-f323-4b83-b5dc-fae8d143816e": {
+      "name": "US Cities",
+      "parameters": {
+        "color": {
+          "circle-fill-color": [
+            "interpolate",
+            [
+              "linear"
+            ],
+            [
+              "get",
+              "ELEV_IN_FT"
+            ],
+            719.2222222222222,
+            [
+              125.0,
+              0.0,
+              179.0,
+              1.0
+            ],
+            1550.4444444444443,
+            [
+              116.0,
+              0.0,
+              218.0,
+              1.0
+            ],
+            2381.6666666666665,
+            [
+              98.0,
+              74.0,
+              237.0,
+              1.0
+            ],
+            3212.8888888888887,
+            [
+              68.0,
+              146.0,
+              231.0,
+              1.0
+            ],
+            4044.111111111111,
+            [
+              0.0,
+              204.0,
+              197.0,
+              1.0
+            ],
+            4875.333333333333,
+            [
+              0.0,
+              247.0,
+              146.0,
+              1.0
+            ],
+            5706.555555555555,
+            [
+              0.0,
+              255.0,
+              88.0,
+              1.0
+            ],
+            6537.777777777777,
+            [
+              40.0,
+              255.0,
+              8.0,
+              1.0
+            ],
+            7369.0,
+            [
+              147.0,
+              255.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "opacity": 1.0,
+        "source": "6c3296ac-d420-46ba-9180-e6bb9d814980",
+        "symbologyState": {
+          "colorRamp": "cool",
+          "method": "color",
+          "mode": "equal interval",
+          "nClasses": "9",
+          "renderType": "Graduated",
+          "value": "ELEV_IN_FT"
+        },
+        "type": "circle"
+      },
+      "type": "VectorLayer",
+      "visible": true
+    },
+    "daa6aac6-3d25-4f8c-b438-a276857e2464": {
+      "filters": {
+        "appliedFilters": [
+          {
+            "feature": null,
+            "operator": null,
+            "value": null
+          }
+        ],
+        "logicalOp": null
+      },
+      "name": "SEEC and NSIDC",
+      "parameters": {
+        "color": null,
+        "opacity": 1.0,
+        "source": "cbffb487-0cb2-402d-8a27-e282d873cb05",
+        "symbologyState": null,
+        "type": "line"
+      },
+      "type": "VectorLayer",
+      "visible": true
+    },
     "e220d708-c851-4f54-b9ae-9c56c5e04480": {
       "name": "Basemap",
       "parameters": {
@@ -16,19 +156,74 @@
   "options": {
     "bearing": 0.0,
     "extent": [
-      -16943218.227214247,
-      1813884.940591243,
-      -5539788.477108987,
-      8661878.212775469
+      -68983912.32501358,
+      -13636175.477854805,
+      -28908895.639435086,
+      16217278.247434432
     ],
-    "latitude": 42.51130981651042,
-    "longitude": -100.98414277727615,
+    "latitude": 11.5149133691923,
+    "longitude": -79.69302799920717,
     "pitch": 0.0,
     "projection": "EPSG:3857",
-    "zoom": 4.3991367692285905
+    "zoom": 1.5333297323058337
   },
   "schemaVersion": "0.5.0",
   "sources": {
+    "6c3296ac-d420-46ba-9180-e6bb9d814980": {
+      "name": "Custom GeoJSON Layer Source",
+      "parameters": {
+        "path": "us_cities.geojson"
+      },
+      "type": "GeoJSONSource"
+    },
+    "71b78233-8804-4d21-8cb2-a3263c0c8124": {
+      "name": "My Results Source",
+      "parameters": {
+        "data": {
+          "bbox": null,
+          "features": [
+            {
+              "bbox": null,
+              "geometry": {
+                "bbox": null,
+                "coordinates": [
+                  -105.24206599999948,
+                  40.01007767367196
+                ],
+                "type": "Point"
+              },
+              "id": null,
+              "properties": {
+                "Address": "4001 Discovery Dr., Boulder, CO",
+                "Name": "Sustainability, Energy, and Environment Community (SEEC) Building"
+              },
+              "type": "Feature"
+            },
+            {
+              "bbox": null,
+              "geometry": {
+                "bbox": null,
+                "coordinates": [
+                  -105.25271574468819,
+                  40.01262175838934
+                ],
+                "type": "Point"
+              },
+              "id": null,
+              "properties": {
+                "Address": "National Snow and Ice Data Center CIRES, 449 UCB University of Colorado Boulder",
+                "Name": "National Snow and Ice Data Center (NSIDC)"
+              },
+              "type": "Feature"
+            }
+          ],
+          "type": "FeatureCollection"
+        },
+        "path": null,
+        "valid": null
+      },
+      "type": "GeoJSONSource"
+    },
     "8c8bb2c9-59a5-4962-9835-bd4eada4a4ce": {
       "name": "Esri.WorldGrayCanvas",
       "parameters": {
@@ -42,6 +237,54 @@
         }
       },
       "type": "RasterSource"
+    },
+    "cbffb487-0cb2-402d-8a27-e282d873cb05": {
+      "name": "SEEC and NSIDC Source",
+      "parameters": {
+        "data": {
+          "bbox": null,
+          "features": [
+            {
+              "bbox": null,
+              "geometry": {
+                "bbox": null,
+                "coordinates": [
+                  -105.24206599999948,
+                  40.01007767367196
+                ],
+                "type": "Point"
+              },
+              "id": null,
+              "properties": {
+                "Address": "4001 Discovery Dr., Boulder, CO",
+                "Name": "Sustainability, Energy, and Environment Community (SEEC) Building"
+              },
+              "type": "Feature"
+            },
+            {
+              "bbox": null,
+              "geometry": {
+                "bbox": null,
+                "coordinates": [
+                  -105.25271574468819,
+                  40.01262175838934
+                ],
+                "type": "Point"
+              },
+              "id": null,
+              "properties": {
+                "Address": "National Snow and Ice Data Center CIRES, 449 UCB University of Colorado Boulder",
+                "Name": "National Snow and Ice Data Center (NSIDC)"
+              },
+              "type": "Feature"
+            }
+          ],
+          "type": "FeatureCollection"
+        },
+        "path": null,
+        "valid": null
+      },
+      "type": "GeoJSONSource"
     }
   }
 }
